@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Document</title>
+  <style>
+    .header {
+      width: 100%;
+      height: 400px;
+      background: white;
+    }
+
+    .head {
+      width: 100%;
+      height: 20px;
+      background-color: rgb(255, 244, 253);
+    }
+
+    .head2 {
+      width: 100%;
+      height: 20px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .content {
+      overflow: hidden;
+      padding: 0 100px;
+    }
+
+    .footer {
+      width: 100%;
+      height: 30px;
+      background: red;
+    }
+
+    .middle {
+      position: relative;
+      width: 100%;
+      float: left;
+      height: 80px;
+      background: green;
+    }
+
+    .left {
+      position: relative;
+      width: 100px;
+      float: left;
+      left: -100px;
+      height: 80px;
+      margin-left: -100%;
+      background: yellow;
+    }
+
+    .right {
+      position: relative;
+      width: 100px;
+      float: left;
+      right: -100px;
+      height: 80px;
+      margin-left: -100px;
+      background: pink
+    }
+
+    /* 導覽列 */
+    .navigation ul {
+      /* 導覽列整體設定*/
+      margin: 0;
+      /* 取消外距，設定為0*/
+      padding: 4px;
+      /* 內部距離，設定為4px*/
+      text-align: center;
+      /* 文字置中*/
+    }
+
+    .navigation ul li {
+
+      list-style-type: none;
+
+      display: inline;
+
+      margin: 0 5px;
+
+      font-size: 18px;
+
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navigation ul li a {
+
+      color: #CA5D87;
+
+      text-decoration: none;
+
+    }
+
+    .navigation ul li a:hover {
+
+      color: #fabb73;
+
+      text-decoration: underline;
+
+    }
+
+    .aligncenter {
+      clear: both;
+      display: block;
+      margin: auto;
+    }
+
+    .alignright {
+      display: inline;
+      float: right;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2"><img class="alignright" src="img/logo/side1.png" style="width: 30px;">
+      <img class="alignright" src="img/logo/side2.png" style="width: 30px;">
+      <img class="alignright" src="img/logo/side3.png" style="width: 30px;">
+      <img class="alignright" src="img/logo/side4.png" style="width: 30px;"></div>
+    <img class="aligncenter" src="img/logo/logo2.png" style="width:180px;;padding: 30px;">
+    <br>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#news">首頁</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#news">找貓籠</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#concept">找飼料</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#video">找貓砂</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#html">找玩具</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#css">找洗浴</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="#css">關於我們</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="content">
+    <div class="middle"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+  </div>
+  <div class="footer"></div>
+
+
+</body>
+
+</html>
