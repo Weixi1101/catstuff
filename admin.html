@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+
+  <style>
+    .header {
+      width: 100%;
+      height: 105px;
+      background: white;
+      box-shadow: 0px -5px black;
+      z-index: 1;
+    }
+
+    .head {
+      width: 100%;
+      height: 25px;
+      background-color: rgb(255, 244, 253);
+    }
+
+    .head2 {
+      width: 100%;
+      height: 30px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .content {
+      overflow: hidden;
+      padding: 0 100px;
+    }
+
+    .footer {
+      width: 90%;
+      height: 100px;
+      background: white;
+    }
+
+    .middle {
+      position: relative;
+      width: 100%;
+      float: left;
+      height: 800px;
+      background: white;
+    }
+
+    .left {
+      position: relative;
+      width: 100px;
+      float: left;
+      left: -100px;
+      height: 3000px;
+      margin-left: -100%;
+      background: green;
+    }
+
+    .right {
+      position: relative;
+      width: 100px;
+      float: left;
+      right: -100px;
+      height: 3000px;
+      margin-left: -100px;
+      background: black;
+    }
+
+    .navigation ul {
+      margin: 0;
+      padding-top: 4px;
+      text-align: center;
+      z-index: -1;
+    }
+
+    .navigation ul li {
+
+      list-style-type: none;
+
+      display: inline;
+
+      margin: 0 5px;
+
+      font-size: 18px;
+
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navigation ul li a {
+
+      color: #CA5D87;
+
+      text-decoration: none;
+
+    }
+
+    .navigation ul li a:hover {
+
+      color: #fabb73;
+
+      text-decoration: underline;
+
+    }
+
+    .aligncenter {
+      clear: both;
+      display: block;
+      margin: auto;
+    }
+
+
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .rollimg {
+      width: 1000px;
+      height: auto;
+      margin-left: 214px;
+    }
+
+    #list {
+      width: 300px;
+      height: 30px;
+      margin-left: 690px;
+    }
+
+    #list li {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #c0c0c0;
+      float: left;
+
+    }
+
+    .bg {
+      background: #f9f2f4 !important;
+    }
+
+    .font {
+      font-family: 'Noto Serif TC', serif;
+
+    }
+
+    #icon1 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    #icon2 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    #icon3 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    #icon4 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    .box {
+      margin-left: 1080px;
+      color: #CA5D87;
+    }
+
+    .parent {
+      position: relative;
+    }
+
+    .search {
+      width: 300px;
+      height: 40px;
+      border-radius: 18px;
+      outline: none;
+      border: 3px solid #CA5D87;
+      padding-left: 20px;
+      position: absolute;
+      font-family: 'Noto Serif TC', serif;
+      color: #CA5D87;
+    }
+
+    .btn {
+      height: 35px;
+      width: 35px;
+      position: absolute;
+      background: url("img/logo/side4.png") no-repeat -2px -99px;
+      top: 6px;
+      left: 285px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style-type: none;
+      /*清除默认列表样式 ....*/
+      margin: 0;
+      padding: 0;
+      /*内外编剧清除*/
+    }
+
+    .lunbo {
+      width: 100%;
+      height: 650px;
+    }
+
+    /*左右按钮的属性设置*/
+    .lr-tab .btn {
+      position: absolute;
+      top: 120px;
+      width: 41px;
+      height: 69px;
+      background: url("img/8a.png");
+
+    }
+
+    .lr-tab .left {
+      left: 0px;
+      background-position-x: -83px;
+
+    }
+
+    .lr-tab .right {
+      right: 0px;
+      background-position-x: -125px;
+    }
+
+    /*左右按钮触碰事件*/
+    .lr-tab .left:hover {
+      background-position-x: 0px;
+    }
+
+    .lr-tab .right:hover {
+      background-position-x: -41px;
+    }
+
+    /*圆形按钮属性设定*/
+    .tab-btn {
+      position: absolute;
+      right: 40px;
+      bottom: 20px;
+      width: 120px;
+      height: 30px;
+      top: 270px;
+
+    }
+
+    .tab-btn .btn {
+
+      float: left;
+      width: 6px;
+      height: 6px;
+      background: #868686;
+      border: 2px solid #c3c3c3;
+      /*边框*/
+      margin-left: 10px;
+      border-radius: 50%;
+    }
+
+    /*圆形按钮触碰事件*/
+    .tab-btn .btn:hover {
+      background: #e4e4e4;
+      border-color: #7f7f7f;
+    }
+
+    .tab-btn .active {
+      background: #e4e4e4;
+      border-color: #7f7f7f;
+    }
+
+    #tds table,
+    #tds tr,
+    #tds td {
+      border: 1px solid #000;
+    }
+
+    table {
+      border: 3px #CA5D87 dashed;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: x-large;
+    }
+
+    h1 {
+      text-align: center;
+      color: #CA5D87;
+    }
+
+    thead {
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+        <li><a href="indexOUT.html" target="_self" class="font">賣場首頁</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="manager.html" target="_self" class="font">訂單紀錄</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="user.html" target="_self" class="font">修改商品</a></li>
+
+      </ul>
+    </nav>
+    <br>
+    <br>
+    <h1 class="font" style="padding-right: 100px;">管理者登入</h1>
+    <hr>
+    <div class="font"><br>
+      <form>
+        <table id="tds" cellpadding="10">
+          <thead>
+            <tr>
+              <td>序號</td>
+              <td>商品名稱</td>
+              <td>庫存</td>
+              <td>價格</td>
+              <td>調整</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. </td>
+              <td>PIDAN | 破碎混合貓砂 低塵版 (豆腐砂+礦砂)</td>
+              <td>99</td>
+              <td>$ 180</td>
+              <td> <input id="btn1" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn2" type="button" onclick="fnsubmit()" value="刪除" />
+              </td>
+            </tr>
+            <tr>
+              <td>2. </td>
+              <td>PIDAN | 原味混合貓砂 (豆腐砂+礦砂)</td>
+              <td>50</td>
+              <td>$ 200</td>
+              <td><input id="btn3" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn4" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>3. </td>
+              <td>ORIJEN | 無穀全齡貓 六種魚</td>
+              <td>101</td>
+              <td>$ 890</td>
+              <td><input id="btn5" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn6" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>4. </td>
+              <td>NUTRAM | 無穀全齡貓(火雞+雞肉)</td>
+              <td>65</td>
+              <td>$ 599</td>
+              <td><input id="btn7" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn8" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>5. </td>
+              <td>LINSLINS | 小鸚鵡貓薄荷逗貓棒</td>
+              <td>78</td>
+              <td>$ 150</td>
+              <td><input id="btn9" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn10" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>6. </td>
+              <td>PIDAN | 電動垂釣逗貓棒</td>
+              <td>90</td>
+              <td>$ 480</td>
+              <td><input id="btn11" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn12" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>7. </td>
+              <td>PIDAN|孟菲斯貓抓板 三角款</td>
+              <td>66</td>
+              <td>$ 550</td>
+              <td><input id="btn13" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn14" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>8. </td>
+              <td>VETRESKA | 起司貓抓板</td>
+              <td>97</td>
+              <td>$ 390</td>
+              <td><input id="btn15" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn16" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>9. </td>
+              <td> A.P.D.C. | 泡泡貓沐浴乳 (玫瑰香)</td>
+              <td>73</td>
+              <td>$ 750</td>
+              <td><input id="btn17" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn18" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>10. </td>
+              <td>PIDAN | 貓咪狗狗專用濕紙巾 - 10抽</td>
+              <td>89</td>
+              <td>$ 150</td>
+              <td><input id="btn19" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn20" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>11. </td>
+              <td>寵物背包</td>
+              <td>31</td>
+              <td>$ 990</td>
+              <td><input id="btn21" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn22" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+            <tr>
+              <td>12. </td>
+              <td>PETKIT | 新風外出貓背包 (二色)</td>
+              <td>53</td>
+              <td>$ 1,590</td>
+              <td><input id="btn23" type="button" onclick="fnsubmit()" value="新增" />
+                <input id="btn24" type="button" onclick="fnsubmit()" value="刪除" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </form><br>
+      <br><br>
+      <hr>
+    </div>
+  </div>
+</body>
+
+</html>

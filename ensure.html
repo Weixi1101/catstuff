@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Document</title>
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    var index2 = 0; /*初始化一个变量 指向下彪*/
+    //点击点
+    $(".tab-btn .btn").click(function () {
+      index2 = $(this).index(); //获取点击该元素下彪
+      $(this).addClass("active").siblings().removeClass("active");
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+    });
+    //点击切换效果
+    $(".lr-tab .right").click(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    $(".lr-tab .left").click(function () {
+      index2--;
+      if (index2 < 0) {
+        index2 = 4;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    });
+    var time2 = setInterval(function () {
+      index2++;
+      if (index2 > 4) {
+        index2 = 0;
+      }
+      $(".item").eq(index2).fadeIn().siblings().fadeOut();
+      $(".tab-btn .btn").eq(index2).addClass("active").siblings().removeClass("active");
+
+    }, 4000); //定时器 重复
+  </script>
+
+  <style>
+    .header {
+      width: 100%;
+      height: 105px;
+      background: white;
+      box-shadow: 0px -5px black;
+      z-index: 1;
+    }
+
+    .head {
+      width: 100%;
+      height: 25px;
+      background-color: rgb(255, 244, 253);
+    }
+
+    .head2 {
+      width: 100%;
+      height: 30px;
+      background-color: rgb(255, 255, 255);
+    }
+
+    .content {
+      overflow: hidden;
+      padding: 0 100px;
+    }
+
+    .footer {
+      width: 90%;
+      height: 100px;
+      background: white;
+    }
+
+    .middle {
+      position: relative;
+      width: 100%;
+      float: left;
+      height: 800px;
+      background: white;
+    }
+
+    .left {
+      position: relative;
+      width: 100px;
+      float: left;
+      left: -100px;
+      height: 3000px;
+      margin-left: -100%;
+      background: green;
+    }
+
+    .right {
+      position: relative;
+      width: 100px;
+      float: left;
+      right: -100px;
+      height: 3000px;
+      margin-left: -100px;
+      background: black;
+    }
+
+    .navigation ul {
+      margin: 0;
+      padding-top: 4px;
+      text-align: center;
+      z-index: -1;
+    }
+
+    .navigation ul li {
+
+      list-style-type: none;
+
+      display: inline;
+
+      margin: 0 5px;
+
+      font-size: 18px;
+
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navigation ul li a {
+
+      color: #CA5D87;
+
+      text-decoration: none;
+
+    }
+
+    .navigation ul li a:hover {
+
+      color: #fabb73;
+
+      text-decoration: underline;
+
+    }
+
+    .aligncenter {
+      clear: both;
+      display: block;
+      margin: auto;
+    }
+
+
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .rollimg {
+      width: 1000px;
+      height: auto;
+      margin-left: 214px;
+    }
+
+    #list {
+      width: 300px;
+      height: 30px;
+      margin-left: 690px;
+    }
+
+    #list li {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #c0c0c0;
+      float: left;
+
+    }
+
+    .bg {
+      background: #f9f2f4 !important;
+    }
+
+    .font {
+      font-family: 'Noto Serif TC', serif;
+    }
+
+
+    .img1 {
+      width: 30%;
+      padding-top: 60px;
+      margin-left: 20px;
+      float: right;
+    }
+
+    .img2 {
+      width: 30%;
+      padding-top: 70px;
+      margin-left: 20px;
+      float: right;
+    }
+
+    .img3 {
+      width: 30%;
+      padding-top: 80px;
+      margin-left: 20px;
+      float: right;
+    }
+
+    .img4 {
+      width: 30%;
+      padding-top: 90px;
+      margin-left: 20px;
+      float: right;
+    }
+
+
+    #icon1 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    #icon2 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    #icon3 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    #icon4 {
+      font-size: 35px;
+      color: #CA5D87;
+      text-align: right;
+      float: right;
+      padding: 2px;
+    }
+
+    .box {
+      margin-left: 1080px;
+      color: #CA5D87;
+    }
+
+    .parent {
+      position: relative;
+    }
+
+    .search {
+      width: 300px;
+      height: 40px;
+      border-radius: 18px;
+      outline: none;
+      border: 3px solid #CA5D87;
+      padding-left: 20px;
+      position: absolute;
+      font-family: 'Noto Serif TC', serif;
+      color: #CA5D87;
+    }
+
+    .btn {
+      height: 35px;
+      width: 35px;
+      position: absolute;
+      background: url("img/logo/side4.png") no-repeat -2px -99px;
+      top: 6px;
+      left: 285px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .banner {
+
+      position: relative;
+      /*相对定位 给绝对定位位置参考*/
+      width: 100%;
+      height: 650px;
+      float: left;
+    }
+
+    .banner .item {
+      display: none;
+      /*隐藏元素*/
+      position: absolute;
+      /* 绝对定位*/
+      width: 100%;
+      height: 650px;
+      top: 0;
+      left: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      /*清除默认列表样式 ....*/
+      margin: 0;
+      padding: 0;
+      /*内外编剧清除*/
+    }
+
+    .lunbo {
+      width: 100%;
+      height: 650px;
+    }
+
+    /*左右按钮的属性设置*/
+    .lr-tab .btn {
+      position: absolute;
+      top: 120px;
+      width: 41px;
+      height: 69px;
+      background: url("img/8a.png");
+
+    }
+
+    .lr-tab .left {
+      left: 0px;
+      background-position-x: -83px;
+
+    }
+
+    .lr-tab .right {
+      right: 0px;
+      background-position-x: -125px;
+    }
+
+    /*左右按钮触碰事件*/
+    .lr-tab .left:hover {
+      background-position-x: 0px;
+    }
+
+    .lr-tab .right:hover {
+      background-position-x: -41px;
+    }
+
+    /*圆形按钮属性设定*/
+    .tab-btn {
+      position: absolute;
+      right: 40px;
+      bottom: 20px;
+      width: 120px;
+      height: 30px;
+      top: 270px;
+
+    }
+
+    .tab-btn .btn {
+
+      float: left;
+      width: 6px;
+      height: 6px;
+      background: #868686;
+      border: 2px solid #c3c3c3;
+      /*边框*/
+      margin-left: 10px;
+      border-radius: 50%;
+    }
+
+    /*圆形按钮触碰事件*/
+    .tab-btn .btn:hover {
+      background: #e4e4e4;
+      border-color: #7f7f7f;
+    }
+
+    .tab-btn .active {
+      background: #e4e4e4;
+      border-color: #7f7f7f;
+    }
+
+    #btn1 {
+      width: 200px;
+      padding: 8px;
+      border: 1px #CA5D87;
+      background-color: #CA5D87;
+
+      color: white;
+      -moz-border-radius: 10px;
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      /* future proofing */
+      -khtml-border-radius: 10px;
+      /* for old Konqueror browsers */
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid transparent;
+      font-weight: 900;
+      font-size: 125%
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="head"></div>
+    <div class="head2">
+      <div style="padding-top: 25px;">
+        <div class="box">
+          <form action="" class="parent">
+            <input type="text" class="search" placeholder="搜尋">
+            <input type="button" name="" id="" class="btn">
+          </form>
+        </div>
+
+        <i class="material-icons" id="icon2" style="margin-right: 20px;"><a href="index.html"
+            style="color:#CA5D87 ;">logout</a></i>
+        <i class="material-icons" id="icon4" style="margin-right: 20px;"><a href="login.html"
+            style="color:#CA5D87 ;">account_circle</a></i>
+
+        <i class="material-icons" id="icon3" style="margin-right: 20px;"><a href="carts.html"
+            style="color:#CA5D87 ;">shopping_bag</a></i>
+      </div>
+    </div>
+    <a href="index.html" target="_self">
+      <img src="img/logo/logo2.png" style="width:100px;margin-left: 20px;float: left;padding-bottom: 15px;">
+    </a>
+    <nav class="navigation">
+      <ul>
+
+        <li><a href="index.html" class="font">熱銷商品</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="index.html" class="font">所有商品</a></li>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <li><a href="aboutus.html" target="_self" class="font">關於我們</a></li>
+
+      </ul>
+    </nav>
+
+
+
+  </div>
+
+
+
+
+  <div class="content">
+    <div id="part1">
+      <div class="middle">
+        <hr>
+        <div class="font" style="margin-left:480px;font-size: 40px;">訂&nbsp單&nbsp確&nbsp認</div><br>
+        <div class="font" style="font-size: 25px;">購買清單</div><br>
+
+
+        <!-- 613晚改動 新增表格和TEXT填寫 -->
+        <!-- 613晚改動 新增表格和TEXT填寫 -->
+        <!-- 613晚改動 新增表格和TEXT填寫 -->
+
+        <div class="font">
+          <table border="1">
+            <tr>
+              <td style="width: 600px;text-align: center;height: 37px;">訂單商品</td>
+              <td style="width: 300px;text-align: center;">單價</td>
+              <td style="width: 300px;text-align: center;">數量</td>
+              <td style="width: 300px;text-align: center;">總價</td>
+            </tr>
+            <tr>
+              <td style="width: 600px;text-align: center;height: 30px;">ORIJEN | 無穀全齡貓 (六種魚)</td>
+              <td style="width: 300px;text-align: center;">NT$890</td>
+              <td style="width: 300px;text-align: center;">1</td>
+              <td style="width: 300px;text-align: center;">NT$890</td>
+            </tr>
+
+          </table>
+        </div>
+        <hr>
+        <div class="font" style="font-size: 25px;">
+          支付方式:
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <form action="" method="get" style="font-size: 15px;">
+            <label>
+              <input type="radio" name="pay" id="card">
+              信用卡&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            </label>
+            <label>
+              <input type="radio" name="pay" id="cash">
+              貨到付款&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            </label>
+            <label>
+              <input type="radio" name="pay" id="line">
+              LINE PAY
+            </label>
+
+          </form>
+        </div>
+        <br>
+        <div class="font" style="font-size: 25px;">送貨地址:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"
+            style="width: 600px;"></div><br>
+        <div class="font" style="font-size: 25px;">購買人:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"
+            style="width: 200px;"></div><br>
+        <div class="font" style="font-size: 25px;">聯係方式:&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"
+            style="width: 200px;"></div>
+        <hr>
+
+        <!-- 613晚改動 新增表格和TEXT填寫 -->
+        <!-- 613晚改動 新增表格和TEXT填寫 -->
+        <!-- 613晚改動 新增表格和TEXT填寫 -->
+
+        <div class="font" style="font-size: 15px;text-align: right;">總付款金額:</div><br>
+        <div class="font" style="text-align: right;"> <input id="btn1" type="button" onclick="fnsubmit()"
+            value="確認購買" />
+        </div>
+        <hr>
+      </div>
+
+      <div class=" content">
+        <div id="part2">
+
+
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer"><br>
+      <hr style="margin-left: 200px;">
+    </div>
+  </div>
+
+</body>
+
+</html>
